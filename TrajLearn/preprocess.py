@@ -85,6 +85,16 @@ def process_datasets(
             ("rome7", input_dir / "rome" / "ho_rome_res7.csv", "date"),
             ("rome8", input_dir / "rome" / "ho_rome_res8.csv", "date"),
             ("rome9", input_dir / "rome" / "ho_rome_res9.csv", "date")
+        ],
+        "kenya": [
+            ("kenya7", input_dir / "kenya" / "kenya_res7.csv", "date"),
+            ("kenya8", input_dir / "kenya" / "kenya_res8.csv", "date"),
+            ("kenya9", input_dir / "kenya" / "kenya_res9.csv", "date")
+        ],
+        "botswana": [
+            ("botswana7", input_dir / "botswana" / "botswana_res7.csv", "date"),
+            ("botswana8", input_dir / "botswana" / "botswana_res8.csv", "date"),
+            ("botswana9", input_dir / "botswana" / "botswana_res9.csv", "date")
         ]
     }
 
@@ -147,8 +157,8 @@ if __name__ == '__main__':
     parser.add_argument('--output_dir', type=Path, default=Path('data'),
                         help='Path to output directory (default: ./data)')
 
-    parser.add_argument('--datasets', type=str, nargs='+', choices=['geolife', 'porto', 'rome'], required=True,
-                        help='Specify which datasets to process (choose from geolife, porto, rome)')
+    parser.add_argument('--datasets', type=str, nargs='+', choices=['geolife', 'porto', 'rome', 'kenya', 'botswana'], required=True,
+                        help='Specify which datasets to process (choose from geolife, porto, rome, kenay, botswana)')
 
     parser.add_argument('--embedding_dim', type=int,
                         help="Dimension of the generated embedding vectors. If not provided, embeddings will not be generated.")
