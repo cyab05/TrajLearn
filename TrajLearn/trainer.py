@@ -53,7 +53,7 @@ class Trainer:
         self.patience = config["patience"]
         self.early_stopping_counter = 0
 
-        dtype = 'float32'
+        dtype = 'float16'
         ptdtype = {
             'float32': torch.float32,
             'bfloat16': torch.bfloat16,
